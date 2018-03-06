@@ -1,6 +1,7 @@
 package com.gxf.utils;
 
 import com.gxf.entities.Person;
+import com.gxf.environment.DIEnvironment;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 

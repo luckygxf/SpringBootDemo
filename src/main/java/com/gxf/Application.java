@@ -1,5 +1,6 @@
 package com.gxf;
 
+import com.gxf.environment.DIEnvironment;
 import com.gxf.utils.ConfigurationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,9 +16,27 @@ import java.util.Arrays;
  */
 @SpringBootApplication
 public class Application {
+    @Autowired
+    private DIEnvironment diEnvironment;
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Application.class, args);
+        testEnvironment(context);
+    }
+
+
+    /**
+     * test environment
+     * */
+    private static void testEnvironment(ApplicationContext context){
+        DIEnvironment dIEnvironment = (DIEnvironment) context.getBean("DIEnvironment");
+        String name = dIEnvironment.getProValueFromEnviroment("user.name1");
+        System.out.println("name: "+ name);
+        String age = dIEnvironment.getProValueFromEnviroment("user.age");
+        System.out.println("age: " + age);
+    }
+
+    private static void testConfig(ApplicationContext context){
         ConfigurationUtil configurationUtil = (ConfigurationUtil) context.getBean("configurationUtil");
         configurationUtil.getApplicationConfiguration();
     }
