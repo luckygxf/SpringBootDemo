@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.PropertySource;
 
 import java.util.Arrays;
 
@@ -15,6 +16,7 @@ import java.util.Arrays;
  * Created by GuanXF on 2018/3/5.
  */
 @SpringBootApplication
+@PropertySource(value = {"classpath:gxf.properties"})
 public class Application {
     @Autowired
     private DIEnvironment diEnvironment;
