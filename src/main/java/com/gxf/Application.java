@@ -34,6 +34,10 @@ public class Application {
         System.out.println("name: "+ name);
         String age = dIEnvironment.getProValueFromEnviroment("user.age");
         System.out.println("age: " + age);
+        String guanName = dIEnvironment.getProValueFromEnviroment("guanxianseng.name");
+        System.out.println("guanName: " + guanName);
+        String guanAge = dIEnvironment.getProValueFromEnviroment("guanxianseng.age");
+        System.out.println("guanAge: " + guanAge);
     }
 
     private static void testConfig(ApplicationContext context){
@@ -52,7 +56,6 @@ public class Application {
             for (String beanName : beanNames) {
                 System.out.println(beanName);
             }
-
         };
     }
 
