@@ -1,5 +1,7 @@
-package com.gxf.controller;
+package com.gxf;
 
+import com.gxf.utils.ConfigurationUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +17,9 @@ import java.util.Arrays;
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        ApplicationContext context = SpringApplication.run(Application.class, args);
+        ConfigurationUtil configurationUtil = (ConfigurationUtil) context.getBean("configurationUtil");
+        configurationUtil.getApplicationConfiguration();
     }
 
     @Bean
