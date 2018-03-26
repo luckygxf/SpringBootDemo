@@ -1,5 +1,6 @@
 package com.gxf;
 
+import com.gxf.circule_beans.CirclairtyA;
 import com.gxf.environment.DIEnvironment;
 import com.gxf.utils.ConfigurationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,16 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Application.class, args);
-        testEnvironment(context);
+        testCirclairty(context);
+    }
+
+    /**
+     * testCirclairty
+     * */
+    private static void testCirclairty(ApplicationContext context){
+        CirclairtyA circlairtyA = (CirclairtyA) context.getBean("circlairtyA");
+        System.out.println(circlairtyA);
+        circlairtyA.print();
     }
 
 
