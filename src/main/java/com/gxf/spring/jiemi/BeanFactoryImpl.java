@@ -6,10 +6,8 @@ import com.gxf.circule_beans.CirclairtyC;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.PropertyValue;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.support.*;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
 /**
  * Created by 58 on 2018/3/26.
@@ -18,13 +16,44 @@ public class BeanFactoryImpl {
 
     public static void main(String[] args) {
         DefaultListableBeanFactory beanRegistry = new DefaultListableBeanFactory();
-        BeanFactory container = bindViaCode(beanRegistry);
+        //bind by code
+//        BeanFactory container = bindViaCode(beanRegistry);
+        //bind by properties file
+//        BeanFactory container = bindViaPropertiesFile(beanRegistry);
+        //bind by xml file
+        BeanFactory container = bindViaXmlFile(beanRegistry);
         CirclairtyA circlairtyA = (CirclairtyA) container.getBean("circlairtyA");
         circlairtyA.print();
         System.out.println(circlairtyA);
+
+        CirclairtyB circlairtyB = (CirclairtyB) container.getBean("circlairtyB");
+        circlairtyB.print();
+        System.out.println(circlairtyB);
+    }
+
+    /**
+     * xml定义beans
+     * */
+    public static BeanFactory bindViaXmlFile(BeanDefinitionRegistry registry){
+        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(registry);
+        reader.loadBeanDefinitions("classpath:beans.xml");
+        return (BeanFactory) registry;
     }
 
 
+    /**
+     * properties文件配置beans
+     * */
+    public static BeanFactory bindViaPropertiesFile(BeanDefinitionRegistry registry){
+        PropertiesBeanDefinitionReader reader = new PropertiesBeanDefinitionReader(registry);
+        reader.loadBeanDefinitions("classpath:beans.properties");
+        return (BeanFactory) registry;
+    }
+
+
+    /**
+     * 代码配置beans
+     * */
     public static BeanFactory bindViaCode(BeanDefinitionRegistry registry){
         AbstractBeanDefinition circlairtyA = new RootBeanDefinition(CirclairtyA.class);
         AbstractBeanDefinition circlairtyB = new RootBeanDefinition(CirclairtyB.class);

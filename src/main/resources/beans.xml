@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="circlairtyA" class="com.gxf.circule_beans.CirclairtyA">
+        <property name="circlairtyB" ref="circlairtyB"/>
+    </bean>
+    <bean id="circlairtyB" class="com.gxf.circule_beans.CirclairtyB">
+        <property name="circlairtyC" ref="circlairtyC"/>
+    </bean>
+    <bean id="circlairtyC" class="com.gxf.circule_beans.CirclairtyC">
+        <property name="circlairtyA" ref="circlairtyA"/>
+    </bean>
+    <!--chapter4-->
+    <bean id="mockBO" class="com.gxf.spring.jiemi.chapter4.MockBuinessObject">
+        <constructor-arg type="java.lang.String" index="1">
+            <value>111111</value>
+        </constructor-arg>
+        <constructor-arg value="22222" type="java.lang.String" index="0"/>
+    </bean>
+    <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+        <property name="scopes">
+            <map>
+                <entry key="thread" value="com.gxf.spring.jiemi.chapter4.ThreadScope"/>
+            </map>
+        </property>
+    </bean>
+</beans>
