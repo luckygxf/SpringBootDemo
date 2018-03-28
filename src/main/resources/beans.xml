@@ -25,4 +25,16 @@
             </map>
         </property>
     </bean>
+    <bean id="nextDayDate" class="com.gxf.spring.jiemi.chapter4.NextDayDateFactoryBean">
+    </bean>
+    <bean id="nextDayPlayer" class="com.gxf.spring.jiemi.chapter4.NextDayDateDisplayer">
+        <property name="dateOfNextDay">
+            <ref bean="nextDayDate"/>
+        </property>
+    </bean>
+    <bean id="dateFoo" class="com.gxf.spring.jiemi.chapter4.DateFoo">
+        <property name="date">
+            <value>2018/3/27</value>
+        </property>
+    </bean>
 </beans>

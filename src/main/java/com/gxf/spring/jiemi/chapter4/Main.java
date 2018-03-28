@@ -15,7 +15,31 @@ public class Main {
         DefaultListableBeanFactory beanRegistry = new DefaultListableBeanFactory();
         //bind by xml file
         BeanFactory container = bindViaXmlFile(beanRegistry);
-        MockBuinessObject mockBO = (MockBuinessObject) container.getBean("mockBO");
+
+        testDate(container);
+    }
+
+    /**
+     * 测试date
+     * */
+    public static void testDate(BeanFactory beanFactory){
+        DateFoo dateFoo = (DateFoo) beanFactory.getBean("dateFoo");
+        System.out.println(dateFoo);
+    }
+
+    /**
+     * 测试FactoryBean
+     * */
+    public static void testFactoryBean(BeanFactory beanFactory){
+        NextDayDateDisplayer nextDayDateDisplayer = (NextDayDateDisplayer) beanFactory.getBean("nextDayPlayer");
+        System.out.println(nextDayDateDisplayer.getDateOfNextDay());
+    }
+
+    /***
+     * 测试从beanfacotry中拿数据
+     * */
+    public static void getBeanFromFactory(BeanFactory beanFactory){
+        MockBuinessObject mockBO = (MockBuinessObject) beanFactory.getBean("mockBO");
         System.out.println(mockBO);
     }
 
