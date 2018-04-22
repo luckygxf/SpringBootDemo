@@ -18,4 +18,9 @@ public class HelloController {
 
         return "Greetings from Spring Boot!";
     }
+
+    @RequestMapping("/redirect")
+    public String redirec(){
+        return "redirect:/https://www.google.com";
+    }
 }
