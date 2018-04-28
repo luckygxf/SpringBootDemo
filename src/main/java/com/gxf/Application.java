@@ -1,5 +1,6 @@
 package com.gxf;
 
+import com.gxf.action.chapter3.Performer;
 import com.gxf.circule_beans.CirclairtyA;
 import com.gxf.environment.DIEnvironment;
 import com.gxf.utils.ConfigurationUtil;
@@ -24,7 +25,15 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Application.class, args);
-        testCirclairty(context);
+        testConfiguration(context);
+    }
+
+    /**
+     * 获取java配置类 配置的bean
+     * */
+    private static void testConfiguration(ApplicationContext context){
+        Performer performer = (Performer) context.getBean("juggler");
+        performer.perfome();
     }
 
     /**

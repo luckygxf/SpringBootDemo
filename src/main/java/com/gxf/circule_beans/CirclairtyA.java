@@ -13,6 +13,10 @@ public class CirclairtyA {
     @Autowired
     private CirclairtyB circlairtyB;
 
+    public void a(){
+        circlairtyB.b();
+    }
+
     public CirclairtyA() {
         s = "CirclairtyA";
     }
