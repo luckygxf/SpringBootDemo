@@ -1,4 +1,4 @@
-package com.gxf.distri_lock;
+package com.gxf.distri_lock.version_redis;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
