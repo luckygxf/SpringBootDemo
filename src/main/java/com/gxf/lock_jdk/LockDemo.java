@@ -1,5 +1,6 @@
 package com.gxf.lock_jdk;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -8,6 +9,10 @@ public class LockDemo {
     private static Lock lock = new ReentrantLock();
 
     public static void main(String[] args) {
+        casDemo();
+    }
+
+    private static void lockDemo(){
         Thread[] threads = new Thread[10];
         for(int i = 0; i < threads.length; i++){
             threads[i] = new Thread(new Increament());
@@ -23,7 +28,6 @@ public class LockDemo {
         } //for
         System.out.println("count: " + count);
     }
-
 
     //use jdk lock
     static class IncrementLock implements Runnable{
@@ -52,4 +56,9 @@ public class LockDemo {
     }
 
 
+    public static void casDemo(){
+        AtomicInteger atomicInteger = new AtomicInteger(1);
+        int x = atomicInteger.getAndIncrement();
+        System.out.println("x = " + x);
+    }
 }
