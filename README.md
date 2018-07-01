@@ -1,5 +1,6 @@
 # SpringBootDemo
 ## 功能
+7. c3p0 demo
 6. 拦截器demo
 5. spring boot aop demo
 4. web server localhost:8080 输出Greetings from Spring Boot
