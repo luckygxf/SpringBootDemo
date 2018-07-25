@@ -51,4 +51,8 @@
         <property name="proxyTargetClass" value="true"></property>
     </bean>
     <bean id="target" class="com.gxf.spring.jiemi.chapter10.Foo"></bean>
+
+    <bean id="personFactory" class="com.gxf.factorybean_demo.PersonFactoryBean">
+        <property name="personInfo" value="guanxianseng,address2,28"></property>
+    </bean>
 </beans>

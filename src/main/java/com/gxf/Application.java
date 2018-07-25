@@ -5,6 +5,8 @@ import com.gxf.circule_beans.CirclairtyA;
 import com.gxf.environment.DIEnvironment;
 import com.gxf.utils.ConfigurationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,7 +27,19 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Application.class, args);
-        testConfiguration(context);
+        getFactoryBean(context);
+    }
+
+
+    /**
+     * 测试bean factory
+     * */
+    private static void getFactoryBean(ApplicationContext context){
+        DefaultListableBeanFactory beanRegistry = new DefaultListableBeanFactory();
+        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanRegistry);
+        reader.loadBeanDefinitions("classpath:beans.xml");
+        Object bean = beanRegistry.getBean("personFactory");
+        System.out.println(bean);
     }
 
     /**
