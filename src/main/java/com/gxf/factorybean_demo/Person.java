@@ -1,6 +1,9 @@
 package com.gxf.factorybean_demo;
 
-public class Person {
+import com.alibaba.fastjson.JSON;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Person implements InitializingBean {
     private String name;
     private String address;
     private int age;
@@ -36,5 +39,14 @@ public class Person {
                 ", address='" + address + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public  void testInit(){
+        System.out.println("Person222 : " + JSON.toJSONString(this));
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Person111 : " + JSON.toJSONString(this));
     }
 }

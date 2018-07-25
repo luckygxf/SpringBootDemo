@@ -55,4 +55,10 @@
     <bean id="personFactory" class="com.gxf.factorybean_demo.PersonFactoryBean">
         <property name="personInfo" value="guanxianseng,address2,28"></property>
     </bean>
+
+    <bean id="guanxianseng" class="com.gxf.factorybean_demo.Person"  init-method="testInit">
+        <property name="name" value="guanxiangfei"/>
+        <property name="address" value="beijing"/>
+        <property name="age" value="28"/>
+    </bean>
 </beans>

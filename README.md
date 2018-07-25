@@ -1,5 +1,6 @@
 # SpringBootDemo
 ## 功能
+9. InitializingBean demo. bean属性设置完成，可以react 在初始化一次
 8. FactoryBean Demo, Factory bean 是产生bean的bean. getBean()拿到的不是bean本身，是bean生成的bean
 7. c3p0 demo
 6. 拦截器demo

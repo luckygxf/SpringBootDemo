@@ -38,7 +38,8 @@ public class Application {
         DefaultListableBeanFactory beanRegistry = new DefaultListableBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanRegistry);
         reader.loadBeanDefinitions("classpath:beans.xml");
-        Object bean = beanRegistry.getBean("personFactory");
+//        Object bean = beanRegistry.getBean("personFactory");
+        Object bean = beanRegistry.getBean("guanxianseng");
         System.out.println(bean);
     }
 
