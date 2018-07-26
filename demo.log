@@ -596,3 +596,5 @@ Verify the connector's configuration, identify and stop any process that's liste
 2018-07-25 20:39:53.211  INFO 10984 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
 2018-07-25 20:39:53.224  INFO 10984 --- [main] com.gxf.Application                      : Started Application in 11.384 seconds (JVM running for 12.119)
 2018-07-25 20:39:53.227  INFO 10984 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [beans.xml]
+2018-07-25 21:28:41.376  INFO 10984 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c1b194a: startup date [Wed Jul 25 20:39:42 CST 2018]; root of context hierarchy
+2018-07-25 21:28:41.394  INFO 10984 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
