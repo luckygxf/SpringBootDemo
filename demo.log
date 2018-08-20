@@ -598,3 +598,60 @@ Verify the connector's configuration, identify and stop any process that's liste
 2018-07-25 20:39:53.227  INFO 10984 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [beans.xml]
 2018-07-25 21:28:41.376  INFO 10984 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c1b194a: startup date [Wed Jul 25 20:39:42 CST 2018]; root of context hierarchy
 2018-07-25 21:28:41.394  INFO 10984 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-02 18:01:45.407  INFO 25202 --- [main] com.gxf.Application                      : Starting Application on admindeMacBook-Pro-4.local with PID 25202 (/Users/gxf/IdeaProjects/demos/SpringBootDemo/target/classes started by gxf in /Users/gxf/IdeaProjects/demos/SpringBootDemo)
+2018-08-02 18:01:45.418  INFO 25202 --- [main] com.gxf.Application                      : No active profile set, falling back to default profiles: default
+2018-08-02 18:01:45.477  INFO 25202 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15bb6bea: startup date [Thu Aug 02 18:01:45 CST 2018]; root of context hierarchy
+2018-08-02 18:01:47.075  INFO 25202 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-02 18:01:47.087  INFO 25202 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-02 18:01:47.089  INFO 25202 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-08-02 18:01:47.194  INFO 25202 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-02 18:01:47.194  INFO 25202 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1720 ms
+2018-08-02 18:01:47.376  INFO 25202 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-02 18:01:47.382  INFO 25202 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 18:01:47.382  INFO 25202 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 18:01:47.382  INFO 25202 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 18:01:47.383  INFO 25202 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 18:01:48.060  INFO 25202 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15bb6bea: startup date [Thu Aug 02 18:01:45 CST 2018]; root of context hierarchy
+2018-08-02 18:01:48.141  INFO 25202 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.gxf.controller.HelloController.index(javax.servlet.http.HttpServletRequest)
+2018-08-02 18:01:48.142  INFO 25202 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/redirect]}" onto public java.lang.String com.gxf.controller.HelloController.redirec()
+2018-08-02 18:01:48.144  INFO 25202 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 18:01:48.145  INFO 25202 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 18:01:48.184  INFO 25202 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 18:01:48.184  INFO 25202 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 18:01:48.227  INFO 25202 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 18:01:48.513  INFO 25202 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-02 18:01:48.581  INFO 25202 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-02 18:01:48.589  INFO 25202 --- [main] com.gxf.Application                      : Started Application in 3.819 seconds (JVM running for 4.77)
+2018-08-02 18:01:48.590  INFO 25202 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [beans.xml]
+2018-08-02 18:01:56.045  INFO 25202 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-02 18:01:56.045  INFO 25202 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-02 18:01:56.067  INFO 25202 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-08-02 18:02:07.162  INFO 25202 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15bb6bea: startup date [Thu Aug 02 18:01:45 CST 2018]; root of context hierarchy
+2018-08-02 18:02:07.163  INFO 25202 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-16 10:19:35.692  INFO 50415 --- [main] com.gxf.Application                      : Starting Application on admindeMacBook-Pro-4.local with PID 50415 (/Users/gxf/IdeaProjects/demos/SpringBootDemo/target/classes started by gxf in /Users/gxf/IdeaProjects/demos/SpringBootDemo)
+2018-08-16 10:19:35.696  INFO 50415 --- [main] com.gxf.Application                      : No active profile set, falling back to default profiles: default
+2018-08-16 10:19:35.772  INFO 50415 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c1b194a: startup date [Thu Aug 16 10:19:35 CST 2018]; root of context hierarchy
+2018-08-16 10:19:37.342  INFO 50415 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-16 10:19:37.358  INFO 50415 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-16 10:19:37.359  INFO 50415 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-08-16 10:19:37.471  INFO 50415 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-16 10:19:37.472  INFO 50415 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1704 ms
+2018-08-16 10:19:37.644  INFO 50415 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-16 10:19:37.648  INFO 50415 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-16 10:19:37.649  INFO 50415 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-16 10:19:37.649  INFO 50415 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-16 10:19:37.649  INFO 50415 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-16 10:19:38.414  INFO 50415 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c1b194a: startup date [Thu Aug 16 10:19:35 CST 2018]; root of context hierarchy
+2018-08-16 10:19:38.501  INFO 50415 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.gxf.controller.HelloController.index(javax.servlet.http.HttpServletRequest)
+2018-08-16 10:19:38.502  INFO 50415 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/redirect]}" onto public java.lang.String com.gxf.controller.HelloController.redirec()
+2018-08-16 10:19:38.507  INFO 50415 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-16 10:19:38.507  INFO 50415 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-16 10:19:38.558  INFO 50415 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-16 10:19:38.559  INFO 50415 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-16 10:19:38.613  INFO 50415 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-16 10:19:38.956  INFO 50415 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-16 10:19:58.943  INFO 50415 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-16 10:19:58.953  INFO 50415 --- [main] com.gxf.Application                      : Started Application in 23.745 seconds (JVM running for 24.239)
+2018-08-16 10:19:58.953  INFO 50415 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [beans.xml]
+2018-08-16 10:22:12.027  INFO 50415 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c1b194a: startup date [Thu Aug 16 10:19:35 CST 2018]; root of context hierarchy
+2018-08-16 10:22:12.028  INFO 50415 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
