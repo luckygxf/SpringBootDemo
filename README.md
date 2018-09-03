@@ -1,5 +1,7 @@
 # SpringBootDemo
 ## 功能
+12. 添加sax解析xml demo。sax需要实现接口，sax解析回调实现类。sax不会把整个文档加载到内存，只会加载部分，dom需要加载整个文档  
+11. FactoryBean demo
 10. ProxyFactory demo
 9. InitializingBean demo. bean属性设置完成，可以react 在初始化一次
 8. FactoryBean Demo, Factory bean 是产生bean的bean. getBean()拿到的不是bean本身，是bean生成的bean

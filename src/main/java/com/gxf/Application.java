@@ -27,7 +27,8 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Application.class, args);
-        getFactoryBean(context);
+//        getFactoryBean(context);
+        testCirclairty(context);
     }
 
 
@@ -39,8 +40,10 @@ public class Application {
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanRegistry);
         reader.loadBeanDefinitions("classpath:beans.xml");
 //        Object bean = beanRegistry.getBean("personFactory");
-        Object bean = beanRegistry.getBean("guanxianseng");
-        System.out.println(bean);
+        Object dog = beanRegistry.getBean("dog");
+//        Object cat = beanRegistry.getBean("cat");
+        System.out.println("dog: " + dog);
+//        System.out.println("cat: " + cat);
     }
 
     /**

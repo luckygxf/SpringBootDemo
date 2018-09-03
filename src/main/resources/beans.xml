@@ -10,6 +10,10 @@
 
     <aop:aspectj-autoproxy proxy-target-class="true">
     </aop:aspectj-autoproxy>
+    <bean id="dog" class="com.gxf.beans.Dog">
+        <property name="name" value="xiaohui"/>
+        <property name="friend" value="com.gxf.beans.Cat"/>
+    </bean>
     <bean id="circlairtyA" class="com.gxf.circule_beans.CirclairtyA">
         <property name="circlairtyB" ref="circlairtyB"/>
     </bean>
