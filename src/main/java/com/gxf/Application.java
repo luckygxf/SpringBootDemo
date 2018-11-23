@@ -1,9 +1,11 @@
 package com.gxf;
 
 import com.gxf.action.chapter3.Performer;
+import com.gxf.beanfactorypostprocessor.MyJavaBean;
 import com.gxf.circule_beans.CirclairtyA;
 import com.gxf.environment.DIEnvironment;
 import com.gxf.utils.ConfigurationUtil;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -15,6 +17,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 
 import java.util.Arrays;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created by GuanXF on 2018/3/5.
@@ -27,8 +30,24 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Application.class, args);
-//        getFactoryBean(context);
-        testCirclairty(context);
+        testBeanFactoryPostPorcessor(context);
+    }
+
+
+    private static void testBeanFactoryPostPorcessor(ApplicationContext context){
+//        DefaultListableBeanFactory beanRegistry = new DefaultListableBeanFactory();
+//        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanRegistry);
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:beanfactorypostprocessor.xml");
+        BeanFactory beanFactory1 = new ClassPathXmlApplicationContext("classpath:beanfactorypostprocessor.xml");
+//        reader.loadBeanDefinitions("classpath:beanfactorypostprocessor.xml");
+        MyJavaBean myJavaBean = (MyJavaBean) beanFactory.getBean("myJavaBean");
+        MyJavaBean myJavaBean1 = (MyJavaBean) beanFactory.getBean("myJavaBean");
+        MyJavaBean myJavaBean2 = (MyJavaBean) beanFactory1.getBean("myJavaBean");
+
+
+        System.out.println("myJavaBean : " + myJavaBean);
+        System.out.println("myJavaBean1: " + myJavaBean1);
+        System.out.println("myJavaBean2: " + myJavaBean2);
     }
 
 
